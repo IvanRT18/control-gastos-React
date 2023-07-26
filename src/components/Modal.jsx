@@ -9,6 +9,7 @@ const Modal = ({
   setAnimarModal,
   guardarGasto,
   editarGasto,
+  setEditarGasto,
 }) => {
   const [mensaje, setMensaje] = useState("");
   const [nombre, setNombre] = useState("");
@@ -29,6 +30,7 @@ const Modal = ({
 
   const ocultarModal = () => {
     setAnimarModal(false);
+    setEditarGasto({});
 
     setTimeout(() => {
       setModal(false);
@@ -103,7 +105,7 @@ const Modal = ({
             <option value="gastos">Gastos</option>
             <option value="ocio">Ocio</option>
             <option value="salud">Salud</option>
-            <option value="suscripciones">Suscripciónes</option>
+            <option value="suscripciones">Suscripciones</option>
           </select>
 
           <input
